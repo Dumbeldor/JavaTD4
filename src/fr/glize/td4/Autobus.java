@@ -4,7 +4,7 @@ import fr.georgy.Jauge;
 
 //source sans la documentation produite par javadoc.
 
-class Autobus {
+public class Autobus {
 	
 	private Jauge m_jauge_assis;
 	private Jauge m_jauge_debout;
@@ -35,7 +35,7 @@ class Autobus {
 	
 	public boolean monteeDemanderAssis(PassagerStandard p) {
 		if (!p.estDehors() || !aPlaceAssise()) {
-			System.out.println("Montee demander assis impossible");
+			// System.out.println("Montee demander assis impossible");
 			return false;
 		}
 		
@@ -48,7 +48,7 @@ class Autobus {
 	
 	public boolean monteeDemanderDebout(PassagerStandard p) {
 		if (!p.estDehors() || !aPlaceDebout()) {
-			System.out.println("Montee demander debout impossible");
+			// System.out.println("Montee demander debout impossible");
 			return false;
 		}
 		

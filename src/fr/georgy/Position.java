@@ -13,28 +13,16 @@ package fr.georgy;
  * @since 2007-2016
  **/
 public class Position {
-
-  private final int DEHORS = 1;
-  private final int ASSIS  = 2;
-  private final int DEBOUT = 3;
-
-  private final int courant;
+	
+  private static Position positionDehors = new Position();
+  private static Position positionAssis = new Position();
+  private static Position positionDebout = new Position();
 
   /**
    * construit une l'instance dans la position dehors.
    * 
    */
-  public Position() {
-    courant = DEHORS;
-  }
-
-  /**
-   * Construit une instance en precisant un des positions du passager.
-   * 
-   * @param e valeur de l'etat.
-   */
-  private Position(int e) {
-    courant = e;
+  private Position() {
   }
 
   /**
@@ -43,7 +31,7 @@ public class Position {
    * @return vrai si l'etat de l'instance est dehors;
    */
   public boolean estDehors() {
-    return courant != ASSIS && courant != DEBOUT;
+	  return this != positionAssis && this != positionDebout;
   }
 
   /**
@@ -52,7 +40,7 @@ public class Position {
    * @return vrai si l'etat de l'instance est assis;
    */
   public boolean estAssis() {
-    return courant == ASSIS;
+	  return this == positionAssis;
   }
 
   /**
@@ -61,7 +49,7 @@ public class Position {
    * @return vrai si l'etat de l'instance est debout;
    */
   public boolean estDebout() {
-    return courant == DEBOUT;
+	  return this == positionDebout;
   }
 
   /**
@@ -70,7 +58,7 @@ public class Position {
    * @return vrai la position est assis ou debout.
    */
   public boolean estInterieur() {
-    return courant != DEHORS;
+	  return this != positionDehors;
   }
 
 
@@ -80,7 +68,7 @@ public class Position {
    * @return instance dans l'etat assis.
    */
   public Position assis() {
-    return new Position(ASSIS); 
+	  return positionAssis; 
   }
 
   /**
@@ -89,7 +77,7 @@ public class Position {
    * @return instance dans l'etat debout.
    */
   public Position debout() {
-    return new Position(DEBOUT);
+    return positionDebout;
   }
 
   /**
@@ -97,8 +85,8 @@ public class Position {
    *
    * @return instance dans l'etat dehors.
    */
-  public Position dehors() {
-    return new Position(DEHORS);
+  public static Position dehors() {
+    return positionDehors;
   }
 
   /**
@@ -113,17 +101,17 @@ public class Position {
   @Override
   public String toString() {
     String nom = null;
-    switch(courant) {
-    case DEHORS :
-      nom = "endehors";
-      break;
-    case ASSIS :
-      nom = "assis";
-      break;
-    case DEBOUT :
-      nom = "debout";
-      break;
+    
+    if (this == positionDehors) {
+    	nom = "endehors";
     }
+    else if (this == positionDebout) {
+    	nom = "debout";
+    }
+    else if (this == positionDehors) {
+    	nom = "dehors";
+    }
+    
     return "<" + nom + ">";
   }
 }

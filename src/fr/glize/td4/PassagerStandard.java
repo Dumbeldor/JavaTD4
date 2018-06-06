@@ -4,7 +4,7 @@ import fr.georgy.Position;
 
 //source sans la documentation produite par javadoc.
 
-class PassagerStandard {
+public class PassagerStandard {
 	
 	final private String m_nom;
 	private int m_destination;
@@ -13,7 +13,7 @@ class PassagerStandard {
 	public PassagerStandard(String nom, int destination) {
 		m_nom = nom;
 		m_destination = destination;
-		m_position = new Position();
+		m_position = Position.dehors();
 	}
 
 	public String nom() {
@@ -45,16 +45,17 @@ class PassagerStandard {
 	}
 	
 	public void monterDans(Autobus t) {
-		System.out.println(m_nom + " essaye de monter dans l'autobus");
+		// System.out.println(m_nom + " essaye de monter dans l'autobus");
 		if (!estDehors()) {
-			System.out.println(m_nom + " n'est pas dehors, il ne peut donc pas monter dans l'autobus");
+			// System.out.println(m_nom + " n'est pas dehors, il ne peut donc pas monter dans l'autobus");
 			return;
 		}
 		
-		if (!t.monteeDemanderAssis(this)) {
-			if (!t.monteeDemanderDebout(this)) {
-				System.out.println("Le passager " + m_nom + " ne peut pas monter dans l'autobus car il n'y a plus de place");
-			}
+		if (t.aPlaceAssise()) {
+			t.monteeDemanderAssis(this);
+		}
+		else if (t.aPlaceDebout()) {
+			t.monteeDemanderDebout(this);
 		}
 	}
 	
