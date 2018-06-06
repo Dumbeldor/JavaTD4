@@ -34,6 +34,10 @@ public class Jauge {
     valeur = depart;
     max = vigieMax;
   }
+  
+  public Jauge(int vigieMax) {
+	  this(vigieMax, 0);
+  }
 
   /**
    * Le niveau de la jauge est-il au-dessus de vigieMax ?
