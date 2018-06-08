@@ -2,15 +2,12 @@ package fr.glize.td4;
 
 import fr.georgy.Position;
 
-//source sans la documentation produite par javadoc.
-
-public class PassagerStandard implements Usager, Passager {
-	
+public class PassagerIndecis implements Usager, Passager {
 	final private String m_nom;
 	private int m_destination;
 	private Position m_position;
 
-	public PassagerStandard(String nom, int destination) {
+	public PassagerIndecis(String nom, int destination) {
 		m_nom = nom;
 		m_destination = destination;
 		changerEnDehors();
@@ -67,6 +64,6 @@ public class PassagerStandard implements Usager, Passager {
 	
 	@Override
 	public String toString() {
-		return "PassagerStandard : " + m_nom + " destination : " + m_destination + " Position : " + m_position;
+		return "PassagerIndecis : " + m_nom + " destination : " + m_destination + " Position : " + m_position;
 	}
 }

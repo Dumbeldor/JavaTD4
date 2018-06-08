@@ -17,7 +17,6 @@ public class Position {
   private static Position positionDehors = new Position();
   private static Position positionAssis = new Position();
   private static Position positionDebout = new Position();
-
   /**
    * construit une l'instance dans la position dehors.
    * 

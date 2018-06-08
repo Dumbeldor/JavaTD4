@@ -2,9 +2,7 @@ package fr.glize.td4;
 
 import fr.georgy.Jauge;
 
-//source sans la documentation produite par javadoc.
-
-public class Autobus implements Transport, VehiculeMontee, VehiculeArret {
+public class NavetteTerminus implements Transport, VehiculeMontee, VehiculeArret {
 	
 	private Jauge m_jauge_assis;
 	private Jauge m_jauge_debout;
@@ -14,7 +12,7 @@ public class Autobus implements Transport, VehiculeMontee, VehiculeArret {
 	
 	private Passager[] m_passager_standard; 
 
-	public Autobus(int nbPlaceAssise, int nbPlaceDebout) {
+	public NavetteTerminus(int nbPlaceAssise, int nbPlaceDebout) {
 		m_jauge_assis = new Jauge(nbPlaceAssise, 0);
 		m_jauge_debout = new Jauge(nbPlaceDebout, 0);
 		
