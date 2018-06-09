@@ -13,5 +13,5 @@ public interface Usager {
 	  //public void changererEnDebout();
 
 	  //public void nouvelArret(Transport t, int numeroArret);
-	  public void monterDans(VehiculeMontee t);
+	  public void monterDans(Transport t);
 }

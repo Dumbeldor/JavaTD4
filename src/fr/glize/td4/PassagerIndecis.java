@@ -41,7 +41,8 @@ public class PassagerIndecis implements Usager, Passager {
 		m_position = m_position.debout();
 	}
 	
-	public void monterDans(VehiculeMontee v) {
+	public void monterDans(Transport t) {
+		VehiculeMontee v = (VehiculeMontee) t;
 		// System.out.println(m_nom + " essaye de monter dans l'autobus");
 		if (!estDehors()) {
 			// System.out.println(m_nom + " n'est pas dehors, il ne peut donc pas monter dans l'autobus");
