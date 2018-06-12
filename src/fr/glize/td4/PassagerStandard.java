@@ -2,7 +2,7 @@ package fr.glize.td4;
 
 //source sans la documentation produite par javadoc.
 
-public class PassagerStandard extends PassagerAbstrait {
+final class PassagerStandard extends PassagerAbstrait {
 
 	public PassagerStandard(String nom, int destination) {
 		super(nom, destination);

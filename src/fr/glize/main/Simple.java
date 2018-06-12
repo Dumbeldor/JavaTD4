@@ -1,24 +1,24 @@
 package fr.glize.main;
 
 import fr.glize.td4.Autobus;
+import fr.glize.td4.FabriqueTec;
 import fr.glize.td4.NavetteTerminus;
-import fr.glize.td4.PassagerIndecis;
-import fr.glize.td4.PassagerLunatique;
-import fr.glize.td4.PassagerStandard;
-import fr.glize.td4.PassagerStresse;
+import fr.glize.td4.Usager;
 
 
 class Simple {
 
   static public void main (String[] args) {
 	  System.out.println("Début des tests");
-	  Autobus serenity = new Autobus(10, 20);
-	  NavetteTerminus navTerm = new NavetteTerminus(10, 20);
+	  Autobus serenity = FabriqueTec.faireAutobus(10, 20);
+	  NavetteTerminus navTerm = FabriqueTec.faireNavetteTerminus(10, 20);
 
-	  PassagerLunatique kaylee = new PassagerLunatique("Kaylee", 10);
-	  PassagerLunatique jayne = new PassagerLunatique("Jayne", 4);
-	  PassagerStresse inara = new PassagerStresse("Inara", 5);
-	  PassagerStresse cailloux = new PassagerStresse("Cailloux", 5);
+	  Usager kaylee = FabriqueTec.fairePassagerLunatique("Kaylee", 10);
+	  Usager jayne = FabriqueTec.fairePassagerLunatique("Jayne", 4);
+	  Usager inara = FabriqueTec.fairePassagerStresse("Inara", 5);
+	  Usager cailloux = FabriqueTec.fairePassagerStresse("Cailloux", 5);
+	  
+	  cailloux.changerEnDehors();
 
 	  System.out.println(serenity);
 

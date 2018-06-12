@@ -14,4 +14,6 @@ public interface Usager {
 
 	  //public void nouvelArret(Transport t, int numeroArret);
 	  public void monterDans(Transport t);
+
+	public void changerEnDehors();
 }
