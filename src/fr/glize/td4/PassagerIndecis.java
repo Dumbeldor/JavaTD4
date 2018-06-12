@@ -61,6 +61,12 @@ public class PassagerIndecis implements Usager, Passager {
 		if (numeroArret == m_destination) {
 			v.arretDemanderSortie(this);
 		}
+		if (estDebout()) {
+			v.arretDemanderAssis(this);
+		}
+		else if (estAssis()) {
+			v.arretDemanderDebout(this);
+		}
 	}
 	
 	@Override

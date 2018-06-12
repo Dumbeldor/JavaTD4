@@ -3,20 +3,22 @@ package fr.glize.main;
 import fr.glize.td4.Autobus;
 import fr.glize.td4.NavetteTerminus;
 import fr.glize.td4.PassagerIndecis;
+import fr.glize.td4.PassagerLunatique;
 import fr.glize.td4.PassagerStandard;
+import fr.glize.td4.PassagerStresse;
 
 
 class Simple {
 
   static public void main (String[] args) {
 	  System.out.println("Début des tests");
-	  Autobus serenity = new Autobus(1, 2);
-	  NavetteTerminus navTerm = new NavetteTerminus(1, 2);
+	  Autobus serenity = new Autobus(10, 20);
+	  NavetteTerminus navTerm = new NavetteTerminus(10, 20);
 
-	  PassagerStandard kaylee = new PassagerStandard("Kaylee", 4);
-	  PassagerStandard jayne = new PassagerStandard("Jayne", 4);
-	  PassagerStandard inara = new PassagerStandard("Inara", 5);
-	  PassagerIndecis cailloux = new PassagerIndecis("Cailloux", 5);
+	  PassagerLunatique kaylee = new PassagerLunatique("Kaylee", 10);
+	  PassagerLunatique jayne = new PassagerLunatique("Jayne", 4);
+	  PassagerStresse inara = new PassagerStresse("Inara", 5);
+	  PassagerStresse cailloux = new PassagerStresse("Cailloux", 5);
 
 	  System.out.println(serenity);
 

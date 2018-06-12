@@ -21,7 +21,7 @@ public class Position {
    * construit une l'instance dans la position dehors.
    * 
    */
-  private Position() {
+  public Position() {
   }
 
   /**
