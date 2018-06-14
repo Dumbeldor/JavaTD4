@@ -4,7 +4,9 @@ package fr.glize.td4;
 interface Passager {
 	public String nom();
 	public boolean estDehors();
-	  
+	
+	public int getDestination();
+	
 	public boolean estAssis();
 	public boolean estDebout();
 

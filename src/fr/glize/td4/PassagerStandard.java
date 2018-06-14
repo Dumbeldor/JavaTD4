@@ -2,10 +2,11 @@ package fr.glize.td4;
 
 //source sans la documentation produite par javadoc.
 
+/*
 final class PassagerStandard extends PassagerAbstrait {
 
-	public PassagerStandard(String nom, int destination) {
-		super(nom, destination);
+	public PassagerStandard(String nom, int destination, PassagerCaractere p) {
+		super(nom, destination, p);
 	}
 
 	// monterDans
@@ -21,6 +22,7 @@ final class PassagerStandard extends PassagerAbstrait {
 
 	// nouvelArret
 	@Override
-	protected void choixChangerPlace(VehiculeArret v, int arret) {}
+	protected void choixChangerPlace(VehiculeArret v, int arret, Passager p) {}
 	
 }
+*/

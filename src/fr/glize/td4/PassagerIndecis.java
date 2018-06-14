@@ -2,6 +2,7 @@ package fr.glize.td4;
 
 import fr.georgy.Position;
 
+/*
 public class PassagerIndecis implements Usager, Passager {
 	final private String m_nom;
 	private int m_destination;
@@ -74,3 +75,4 @@ public class PassagerIndecis implements Usager, Passager {
 		return "PassagerIndecis : " + m_nom + " destination : " + m_destination + " Position : " + m_position;
 	}
 }
+*/

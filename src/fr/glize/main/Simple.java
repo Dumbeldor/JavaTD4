@@ -3,6 +3,8 @@ package fr.glize.main;
 import fr.glize.td4.Autobus;
 import fr.glize.td4.FabriqueTec;
 import fr.glize.td4.NavetteTerminus;
+import fr.glize.td4.Nerveux;
+import fr.glize.td4.Prudent;
 import fr.glize.td4.Usager;
 
 
@@ -13,10 +15,10 @@ class Simple {
 	  Autobus serenity = FabriqueTec.faireAutobus(10, 20);
 	  NavetteTerminus navTerm = FabriqueTec.faireNavetteTerminus(10, 20);
 
-	  Usager kaylee = FabriqueTec.fairePassagerLunatique("Kaylee", 10);
-	  Usager jayne = FabriqueTec.fairePassagerLunatique("Jayne", 4);
-	  Usager inara = FabriqueTec.fairePassagerStresse("Inara", 5);
-	  Usager cailloux = FabriqueTec.fairePassagerStresse("Cailloux", 5);
+	  Usager kaylee = FabriqueTec.fairePassagerFatigue("Kaylee", 10, FabriqueTec.fairePassagerPrudent());
+	  Usager jayne = FabriqueTec.fairePassagerFatigue("Jayne", 4, FabriqueTec.fairePassagerNerveux());
+	  Usager inara = FabriqueTec.fairePassagerTetu("Inara", 5, FabriqueTec.fairePassagerPrudent());
+	  Usager cailloux = FabriqueTec.fairePassagerTetu("Cailloux", 6, FabriqueTec.fairePassagerNerveux());
 	  
 	  cailloux.changerEnDehors();
 
